@@ -6,8 +6,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from pages.cart_page import Cart_Page
+from pages.client_info_page import Client_info_Page
+from pages.finish_page import Finish_Page
 from pages.login_page import LoginPage
 from pages.main_page import Main_Page
+from pages.payment_page import Payment_Page
 
 
 # from selenium.webdriver.chrome.options import Options
@@ -30,4 +33,13 @@ def test_buy_product():
 
     cp = Cart_Page(driver)
     cp.click_checkout_button()
+
+    cip = Client_info_Page(driver)
+    cip.input_information()
+
+    p = Payment_Page(driver)
+    p.click_finish_button()
+
+    f = Finish_Page(driver)
+    f.finish()
 
