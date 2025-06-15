@@ -13,6 +13,8 @@ class Main_Page(Base):
     #LOCATORS
     select_product_1 = "//button[@id='add-to-cart-sauce-labs-backpack']"
     cart = "//div[@id='shopping_cart_container']"
+    menu = "//button[@id='react-burger-menu-btn']"
+    about = "//a[@id='about_sidebar_link']"
     # Getters
 
     def get_select_product_1(self):
@@ -21,6 +23,11 @@ class Main_Page(Base):
     def get_cart(self):
         return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.cart)))
 
+    def get_menu(self):
+        return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.menu)))
+
+    def get_about(self):
+        return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.about)))
     # ACTIONS
 
     def click_select_product_1(self):
@@ -31,9 +38,23 @@ class Main_Page(Base):
         self.get_cart().click()
         print("Нажата кнопка для перехода в корзину")
 
+    def click_menu(self):
+        self.get_menu().click()
+        print("Нажата кнопка для перехода в MENU")
+
+    def click_about(self):
+        self.get_about().click()
+        print("Нажата кнопка для перехода в ABOUT")
+
     # METHODS
 
     def select_product(self):
         self.get_current_url()
         self.click_select_product_1()
         self.click_cart()
+
+    def select_menu_about(self):
+        self.get_current_url()
+        self.click_menu()
+        self.click_about()
+        self.assert_url('https://saucelabs.com/')
