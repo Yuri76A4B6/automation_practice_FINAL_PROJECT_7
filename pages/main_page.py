@@ -12,6 +12,8 @@ class Main_Page(Base):
 
     #LOCATORS
     select_product_1 = "//button[@id='add-to-cart-sauce-labs-backpack']"
+    select_product_2 = "//button[@id='add-to-cart-sauce-labs-bike-light']"
+    select_product_3 = "//button[@id='add-to-cart-sauce-labs-bolt-t-shirt']"
     cart = "//div[@id='shopping_cart_container']"
     menu = "//button[@id='react-burger-menu-btn']"
     about = "//a[@id='about_sidebar_link']"
@@ -19,6 +21,12 @@ class Main_Page(Base):
 
     def get_select_product_1(self):
         return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.select_product_1)))
+
+    def get_select_product_2(self):
+        return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.select_product_2)))
+
+    def get_select_product_3(self):
+        return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.select_product_3)))
 
     def get_cart(self):
         return WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, self.cart)))
@@ -34,6 +42,14 @@ class Main_Page(Base):
         self.get_select_product_1().click()
         print("Выбран товар номер 1")
 
+    def click_select_product_2(self):
+        self.get_select_product_2().click()
+        print("Выбран товар номер 2")
+
+    def click_select_product_3(self):
+        self.get_select_product_3().click()
+        print("Выбран товар номер 3")
+
     def click_cart(self):
         self.get_cart().click()
         print("Нажата кнопка для перехода в корзину")
@@ -48,9 +64,19 @@ class Main_Page(Base):
 
     # METHODS
 
-    def select_product(self):
+    def select_product1(self):
         self.get_current_url()
         self.click_select_product_1()
+        self.click_cart()
+
+    def select_product2(self):
+        self.get_current_url()
+        self.click_select_product_2()
+        self.click_cart()
+
+    def select_product3(self):
+        self.get_current_url()
+        self.click_select_product_3()
         self.click_cart()
 
     def select_menu_about(self):
