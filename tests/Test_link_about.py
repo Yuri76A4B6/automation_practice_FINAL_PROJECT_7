@@ -15,7 +15,7 @@ from pages.payment_page import Payment_Page
 
 # from selenium.webdriver.chrome.options import Options
 
-def test_link_about():
+def test_link_about(set_up):
     # options = Options()
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options = webdriver.ChromeOptions()
@@ -30,5 +30,6 @@ def test_link_about():
 
     mp = Main_Page(driver)
     mp.select_menu_about()
+    driver.quit()
 
 

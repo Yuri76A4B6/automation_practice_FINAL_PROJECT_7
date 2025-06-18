@@ -14,9 +14,8 @@ from pages.payment_page import Payment_Page
 import pytest
 
 # from selenium.webdriver.chrome.options import Options
-@pytest.mark.run(order=3)
-def test_buy_product_1():
-    # options = Options()
+#@pytest.mark.run(order=3)
+def test_buy_product_1(set_up, set_group):
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
@@ -34,19 +33,19 @@ def test_buy_product_1():
     cp = Cart_Page(driver)
     cp.click_checkout_button()
 
-    # cip = Client_info_Page(driver)
-    # cip.input_information()
-    #
-    # p = Payment_Page(driver)
-    # p.click_finish_button()
-    #
-    # f = Finish_Page(driver)
-    # f.finish()
-    print("Завершена работа метода test_buy_product_1")
+    cip = Client_info_Page(driver)
+    cip.input_information()
 
-@pytest.mark.run(order=1)
-def test_buy_product_2():
-    # options = Options()
+    p = Payment_Page(driver)
+    p.click_finish_button()
+
+    f = Finish_Page(driver)
+    f.finish()
+    print("Завершена работа метода test_buy_product_1")
+    driver.quit()
+
+#@pytest.mark.run(order=1)
+def test_buy_product_2(set_up):
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
@@ -73,9 +72,10 @@ def test_buy_product_2():
     # f = Finish_Page(driver)
     # f.finish()
     print("Завершена работа метода test_buy_product_2")
-@pytest.mark.run(order=2)
-def test_buy_product_3():
-    # options = Options()
+    driver.quit()
+
+#@pytest.mark.run(order=2)
+def test_buy_product_3(set_up):
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
@@ -102,3 +102,4 @@ def test_buy_product_3():
     # f = Finish_Page(driver)
     # f.finish()
     print("Завершена работа метода test_buy_product_3")
+    driver.quit()
