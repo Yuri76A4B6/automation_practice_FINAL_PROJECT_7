@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -66,11 +67,12 @@ class Main_Page(Base):
     # METHODS
 
     def select_product1(self):
-        Logger.add_start_step(method="select_product1")
-        self.get_current_url()
-        self.click_select_product_1()
-        self.click_cart()
-        Logger.add_end_step(url=self.driver.current_url, method="select_product1")
+        with allure.step("Select product 1"):
+            Logger.add_start_step(method="select_product1")
+            self.get_current_url()
+            self.click_select_product_1()
+            self.click_cart()
+            Logger.add_end_step(url=self.driver.current_url, method="select_product1")
 
     def select_product2(self):
         self.get_current_url()
@@ -83,7 +85,8 @@ class Main_Page(Base):
         self.click_cart()
 
     def select_menu_about(self):
-        self.get_current_url()
-        self.click_menu()
-        self.click_about()
-        self.assert_url('https://saucelabs.com/')
+        with allure.step("Select menu about"):
+            self.get_current_url()
+            self.click_menu()
+            self.click_about()
+            self.assert_url('https://saucelabs.com/')

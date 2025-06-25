@@ -1,0 +1,19 @@
+Start Test 1
+Current url https://www.saucedemo.com/
+Введено имя пользователя
+Введен пароль
+Нажата кнопка Login
+Good value
+Current url https://www.saucedemo.com/inventory.html
+Выбран товар номер 1
+Нажата кнопка для перехода в корзину
+Нажата кнопка ЧЕКАУТ
+Current url https://www.saucedemo.com/checkout-step-one.html
+Введено имя пользователя
+Введена фамилия пользователя
+Введен индекс ZIP
+Нажата кнопка Continue
+Нажата кнопка для завершения оплаты
+Current url https://www.saucedemo.com/checkout-complete.html
+Good value URL
+Завершена работа метода test_buy_product_1

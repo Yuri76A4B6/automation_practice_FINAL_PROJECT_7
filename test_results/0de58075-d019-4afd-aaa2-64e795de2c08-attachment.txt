@@ -1,0 +1,12 @@
+Start test
+Start Test
+Current url https://www.saucedemo.com/
+Введено имя пользователя
+Введен пароль
+Нажата кнопка Login
+Good value
+Current url https://www.saucedemo.com/inventory.html
+Нажата кнопка для перехода в MENU
+Нажата кнопка для перехода в ABOUT
+Good value URL
+Finish test

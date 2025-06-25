@@ -1,0 +1,44 @@
+
+-----
+Test: GITHUB/tests/Test_buy_product.py::test_buy_product_1 (call)
+Start time: 2025-06-24 22:06:55.745914
+Start name method: authorization
+
+End time: 2025-06-24 22:06:56.906932
+End name method: authorization
+URL: https://www.saucedemo.com/inventory.html
+
+-----
+
+-----
+Test: GITHUB/tests/Test_buy_product.py::test_buy_product_1 (call)
+Start time: 2025-06-24 22:06:56.906932
+Start name method: select_product1
+
+End time: 2025-06-24 22:06:57.057528
+End name method: select_product1
+URL: https://www.saucedemo.com/cart.html
+
+-----
+
+-----
+Test: GITHUB/tests/Test_buy_product.py::test_buy_product_1 (call)
+Start time: 2025-06-24 22:06:57.112382
+Start name method: input_information
+
+End time: 2025-06-24 22:06:57.345758
+End name method: input_information
+URL: https://www.saucedemo.com/checkout-step-two.html
+
+-----
+
+-----
+Test: GITHUB/tests/Test_buy_product.py::test_buy_product_1 (call)
+Start time: 2025-06-24 22:06:57.398617
+Start name method: finish
+
+End time: 2025-06-24 22:06:57.522010
+End name method: finish
+URL: https://www.saucedemo.com/checkout-complete.html
+
+-----

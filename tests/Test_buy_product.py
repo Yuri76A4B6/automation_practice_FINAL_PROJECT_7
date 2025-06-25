@@ -1,4 +1,5 @@
 from selenium import webdriver
+import allure
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
@@ -15,6 +16,7 @@ import pytest
 
 # from selenium.webdriver.chrome.options import Options
 #@pytest.mark.run(order=3)
+@allure.description("Test buy product 1")
 def test_buy_product_1():
     # options.add_experimental_option('excludeSwitches', ['enable-logging'])
     options = webdriver.ChromeOptions()
